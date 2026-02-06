@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests\StoreeventRequest;
+use App\Http\Requests\UpdateeventRequest;
+use App\Models\event;
+
+class EventController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(StoreeventRequest $request)
+    {
+        //
+    }
+
+    //  home page random event
+    public function showOnHome()
+    {
+        $eventList = event::all(['id', 'img', 'name', 'gid', 'stime', 'etime']);
+        return $eventList;
+
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(event $event)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(event $event)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(UpdateeventRequest $request, event $event)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(event $event)
+    {
+        //
+    }
+}
