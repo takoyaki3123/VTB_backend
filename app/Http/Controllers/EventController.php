@@ -33,7 +33,7 @@ class EventController extends Controller
     }
 
     //  home page random event
-    public function showOnHome()
+    public function randomList()
     {
         $eventList = event::all(['id', 'img', 'name', 'gid', 'stime', 'etime']);
         return $eventList;

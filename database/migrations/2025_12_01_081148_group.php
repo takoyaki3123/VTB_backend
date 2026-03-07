@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('desc');
-            $table->string('logo')->nullable();
-            $table->string('img');
+            $table->string('logo');
+            $table->string('img')->nullable();
             $table->string('link')->nullable(); // official page
             $table->date('activeDate')->nullable(); // group create time(not on this site)
             $table->dateTime('ctime')->useCurrent();

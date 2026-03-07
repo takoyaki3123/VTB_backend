@@ -26,9 +26,20 @@ class GroupController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(group $group)
+    public function show(Request $request)
     {
         //
+        $groupId = $request->id;
+        $group = group::find($groupId, ['id', 'name', 'desc', 'img', 'link', 'activeDate']);
+
+        return $group;
+    }
+
+    public function showList()
+    {
+        //
+        $groupList = group::all(['id', 'logo', 'name']);
+        return ['list' => $groupList];
     }
 
     // home page random group

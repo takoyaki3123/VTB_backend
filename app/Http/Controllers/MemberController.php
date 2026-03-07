@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorememberRequest;
 use App\Http\Requests\UpdatememberRequest;
 use App\Models\member;
+use Illuminate\Support\Facades\Log;
 
 class MemberController extends Controller
 {
@@ -40,9 +41,10 @@ class MemberController extends Controller
         //
     }
 
-    public function showOnHome()
+    public function randomList()
     {
         $memberList = member::all(['id', 'gid', 'name', 'img', 'activeDate', 'sns', 'live']);
+        Log::info($memberList);
         return $memberList;
     }
 

@@ -31,9 +31,9 @@ class MemberSeeder extends Seeder
             $model->name = $imgCollectData['name'];
             $model->enName = $imgCollectData['enName'];
             $model->desc = $imgCollectData['desc'];
-            $model->live = json_encode($imgCollectData['live']);
+            $model->live = $imgCollectData['live'];
             $model->gid = $imgCollectData['gid'];
-            $model->sns = json_encode($imgCollectData['sns']);
+            $model->sns = $imgCollectData['sns'];
             $model->img = $imgCollectData['img'];
             $model->save();
         }

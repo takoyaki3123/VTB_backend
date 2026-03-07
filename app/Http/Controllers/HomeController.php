@@ -43,8 +43,8 @@ class HomeController extends Controller
         if (empty($homeData)) {
             return response()->json(['message' => '沒有找到資料'], 400);
         }
-        $member = new MemberController()->showOnHome();
-        $event = new EventController()->showOnHome();
+        $member = new MemberController()->randomList();
+        $event = new EventController()->randomList();
         $result = ['img' => $homeData['img'], 'member' => $member, 'event' => $event];
         return $result;
     }
